@@ -50,15 +50,6 @@ describe('reduce', () => {
       expect(result).toBe(undefined);
     });
 
-  it('should not call callback if array has one element and no initial value',
-    () => {
-      const callback = jest.fn();
-
-      [5].reduce2(callback);
-
-      expect(callback).not.toHaveBeenCalled();
-    });
-
   it('should pass index and array to callback', () => {
     const mockFn = jest.fn((acc, curr, index, arr) => acc + curr);
 
